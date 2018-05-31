@@ -7,7 +7,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
-import pl.nataliana.mylibrary.JokeBase;
+import pl.nataliana.lib100.MyClass;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -42,8 +42,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void tellJoke(View view) {
-        Toast.makeText(this, JokeBase.joke1, Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, MyClass.joke1, Toast.LENGTH_SHORT).show();
     }
-
 
 }
