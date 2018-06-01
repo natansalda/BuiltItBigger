@@ -1,11 +1,28 @@
 package pl.nataliana.mylibrary;
 
-import android.view.View;
-import android.widget.Toast;
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
-public class JokeBase {
+//This is my android library
+public class JokeBase extends AppCompatActivity {
 
-    public void tellJoke(View view) {
-        Toast.makeText(this, MainActivity.joke1, Toast.LENGTH_SHORT).show();
+    public static String JOKE_KEY = "joke-key";
+
+    private String jokeFromLib = "";
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        if (getIntent().getStringExtra(JokeBase.JOKE_KEY) != null) {
+            jokeFromLib = getIntent().getStringExtra(JokeBase.JOKE_KEY);
+        }
+
+        getSupportFragmentManager()
+                .beginTransaction().add(
+                R.id.joke_fragment,
+                JokeFragment.newInstance(jokeFromLib))
+                .commit();
     }
 }

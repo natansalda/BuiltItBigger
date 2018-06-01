@@ -2,5 +2,7 @@ package pl.nataliana.lib100;
 
 public class MyClass {
 
-    public static String joke1 = "This is test joke";
+    public class JokeTellingJavaLib {
+        public String getJoke() { return "I don't know any jokes, buha"; }
+    }
 }
