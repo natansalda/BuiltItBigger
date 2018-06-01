@@ -47,6 +47,6 @@ dependencies {
     })
 
     testImplementation 'junit:junit:4.12'
-    implementation project(path: ':JavaJokeTellingLib')
-    implementation project(path: ':mylibrary')
+    implementation project(path: ':javaLib')
+    implementation project(path: ':androidLib')
 }
