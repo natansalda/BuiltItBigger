@@ -14,7 +14,7 @@ public class JokeBase extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_lib_main);
 
         if (getIntent().getStringExtra(JokeBase.JOKE_KEY) != null) {
             jokeFromLib = getIntent().getStringExtra(JokeBase.JOKE_KEY);
