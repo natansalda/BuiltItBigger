@@ -13,6 +13,7 @@ buildscript {
 android {
     compileSdkVersion 27
     buildToolsVersion '27.0.3'
+    flavorDimensions "type"
 
     defaultConfig {
         applicationId "com.udacity.gradle.builditbigger"
@@ -31,22 +32,34 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-}
 
-dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-    endpointsServer project(path: ':backend', configuration: 'endpoints')
-    implementation 'com.android.support:appcompat-v7:27.1.1'
-    implementation 'com.google.android.gms:play-services-ads:15.0.1'
-    implementation 'com.google.api-client:google-api-client:1.23.0'
-    implementation 'com.google.http-client:google-http-client-android:1.23.0'
-    implementation 'com.google.code.findbugs:jsr305:3.0.1'
+    productFlavors {
+        free {
+            applicationId "com.udacity.gradle.builditbigger.free"
+            dimension "type"
+        }
 
-    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
-        exclude group: 'com.android.support', module: 'support-annotations'
-    })
+        paid {
+            applicationId "com.udacity.gradle.builditbigger.paid"
+            dimension "type"
+        }
+    }
 
-    testImplementation 'junit:junit:4.12'
-    implementation project(path: ':javaLib')
-    implementation project(path: ':androidLib')
+    dependencies {
+        implementation fileTree(dir: 'libs', include: ['*.jar'])
+        endpointsServer project(path: ':backend', configuration: 'endpoints')
+        implementation 'com.android.support:appcompat-v7:27.1.1'
+        implementation 'com.google.android.gms:play-services-ads:15.0.1'
+        implementation 'com.google.api-client:google-api-client:1.23.0'
+        implementation 'com.google.http-client:google-http-client-android:1.23.0'
+        implementation 'com.google.code.findbugs:jsr305:3.0.1'
+
+        androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+            exclude group: 'com.android.support', module: 'support-annotations'
+        })
+
+        testImplementation 'junit:junit:4.12'
+        implementation project(path: ':javaLib')
+        implementation project(path: ':androidLib')
+    }
 }
