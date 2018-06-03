@@ -23,7 +23,7 @@ public class EndpointAsyncTaskTest {
     public ActivityTestRule<MainActivity> activityTestRule = new ActivityTestRule<>(MainActivity.class);
 
     @Test
-    public void checkIfJokeIsDisplayed() {
+    public void buttonIsClickedAndDisplaysJoke() {
         onView(withId(R.id.tell_joke_button)).perform(click());
         onView(withId(R.id.tv_myjoke)).check(matches(not(withText(""))));
     }
