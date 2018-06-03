@@ -7,7 +7,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-import pl.nataliana.lib100.MyClass;
+import pl.nataliana.lib100.JokeTellingClass;
 import pl.nataliana.mylibrary.JokeBase;
 
 
@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void tellJoke(View view) {
-        MyClass jokeTeller = new MyClass();
+        JokeTellingClass jokeTeller = new JokeTellingClass();
         Intent intent = new Intent(this, JokeBase.class);
         intent.putExtra(JokeBase.JOKE_KEY, jokeTeller.getJoke());
         startActivity(intent);
