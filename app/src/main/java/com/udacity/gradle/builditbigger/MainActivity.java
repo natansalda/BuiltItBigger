@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-//        new EndpointAsyncTask().execute(new Pair<Context, String>(this, "Manfred"));
+        new EndpointAsyncTask().execute(new Pair<Context, String>(this, "Manfred"));
     }
 
 
@@ -41,10 +41,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void tellJoke(View view) {
-        new EndpointAsyncTask().execute(new Pair<Context, String>(this, "Manfred"));
-//        JokeTellingClass jokeTeller = new JokeTellingClass();
-//        Intent intent = new Intent(this, JokeBase.class);
-//        intent.putExtra(JokeBase.JOKE_KEY, jokeTeller.getJoke());
-//        startActivity(intent);
+        JokeTellingClass jokeTeller = new JokeTellingClass();
+        Intent intent = new Intent(this, JokeBase.class);
+        intent.putExtra(JokeBase.JOKE_KEY, jokeTeller.getJoke());
+        startActivity(intent);
     }
 }
