@@ -31,6 +31,8 @@
     <orderEntry type="module" module-name="javaLib" exported="" />
     <orderEntry type="library" exported="" scope="PROVIDED" name="endpoints-framework-2.0.9" level="project" />
     <orderEntry type="library" exported="" scope="PROVIDED" name="javax.inject-1" level="project" />
+    <orderEntry type="library" exported="" scope="PROVIDED" name="appengine-endpoints-1.9.42" level="project" />
+    <orderEntry type="library" exported="" scope="PROVIDED" name="appengine-endpoints-deps-1.9.42" level="project" />
     <orderEntry type="library" exported="" scope="PROVIDED" name="google-api-client-appengine-1.21.0" level="project" />
     <orderEntry type="library" exported="" scope="PROVIDED" name="google-oauth-client-appengine-1.21.0" level="project" />
     <orderEntry type="library" exported="" scope="PROVIDED" name="google-api-client-servlet-1.21.0" level="project" />
@@ -69,6 +71,8 @@
     <orderEntry type="library" exported="" scope="PROVIDED" name="commons-codec-1.3" level="project" />
     <orderEntry type="library" exported="" scope="RUNTIME" name="endpoints-framework-2.0.9" level="project" />
     <orderEntry type="library" exported="" scope="RUNTIME" name="javax.inject-1" level="project" />
+    <orderEntry type="library" exported="" scope="RUNTIME" name="appengine-endpoints-1.9.42" level="project" />
+    <orderEntry type="library" exported="" scope="RUNTIME" name="appengine-endpoints-deps-1.9.42" level="project" />
     <orderEntry type="library" exported="" scope="RUNTIME" name="google-api-client-appengine-1.21.0" level="project" />
     <orderEntry type="library" exported="" scope="RUNTIME" name="google-oauth-client-appengine-1.21.0" level="project" />
     <orderEntry type="library" exported="" scope="RUNTIME" name="google-api-client-servlet-1.21.0" level="project" />
@@ -107,6 +111,8 @@
     <orderEntry type="library" exported="" scope="RUNTIME" name="commons-codec-1.3" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="endpoints-framework-2.0.9" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="javax.inject-1" level="project" />
+    <orderEntry type="library" exported="" scope="TEST" name="appengine-endpoints-1.9.42" level="project" />
+    <orderEntry type="library" exported="" scope="TEST" name="appengine-endpoints-deps-1.9.42" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="google-api-client-appengine-1.21.0" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="google-oauth-client-appengine-1.21.0" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="google-api-client-servlet-1.21.0" level="project" />
