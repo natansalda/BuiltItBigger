@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity implements EndpointAsyncTask
     public void endpointAsyncTaskResponse(String joke) {
         Toast.makeText(this, joke, Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(MainActivity.this, JokeBase.class);
-        intent.putExtra("joke", joke);
+        intent.putExtra(JokeBase.JOKE_KEY,joke);
         startActivity(intent);
     }
 }
