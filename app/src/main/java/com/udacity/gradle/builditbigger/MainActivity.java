@@ -8,6 +8,7 @@ import android.util.Pair;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 import pl.nataliana.lib100.JokeTellingClass;
 import pl.nataliana.mylibrary.JokeBase;
@@ -19,7 +20,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        new EndpointAsyncTask().execute(new Pair<Context, String>(this, "Manfred"));
     }
 
 
@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
     public void tellJoke(View view) {
         JokeTellingClass jokeTeller = new JokeTellingClass();
         Intent intent = new Intent(this, JokeBase.class);
+        new EndpointAsyncTask().execute(new Pair<Context, String>(this, "Manfred"));
         intent.putExtra(JokeBase.JOKE_KEY, jokeTeller.getJoke());
         startActivity(intent);
     }
