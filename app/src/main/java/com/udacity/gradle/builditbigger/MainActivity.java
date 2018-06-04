@@ -14,7 +14,7 @@ import pl.nataliana.lib100.JokeTellingClass;
 import pl.nataliana.mylibrary.JokeBase;
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements EndpointAsyncTaskResponse {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,8 +43,16 @@ public class MainActivity extends AppCompatActivity {
     public void tellJoke(View view) {
         JokeTellingClass jokeTeller = new JokeTellingClass();
         Intent intent = new Intent(this, JokeBase.class);
-        new EndpointAsyncTask().execute(new Pair<Context, String>(this, "Manfred"));
+        new EndpointAsyncTask(this).execute(new Pair<Context, String>(this, "Manfred"));
         intent.putExtra(JokeBase.JOKE_KEY, jokeTeller.getJoke());
+        startActivity(intent);
+    }
+
+    @Override
+    public void endpointAsyncTaskResponse(String joke) {
+        Toast.makeText(this, joke, Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(MainActivity.this, JokeBase.class);
+        intent.putExtra("joke", joke);
         startActivity(intent);
     }
 }
